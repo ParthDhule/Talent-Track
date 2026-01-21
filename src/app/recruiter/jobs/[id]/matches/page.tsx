@@ -35,6 +35,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { useToast } from '@/hooks/use-toast';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { makeOffer, getApplications } from '@/lib/application-store';
 
 type MatchedStudent = Student & {
   matchScore: number;
@@ -58,6 +59,13 @@ export default function JobMatchesPage({ params }: { params: { id: string } }) {
     setJob(currentJob);
 
     if (currentJob) {
+      // Check for existing offers for this job
+      const allApplications = getApplications();
+      const offeredIds = allApplications
+        .filter(app => app.job.id === id && app.status === 'Offered')
+        .map(app => app.student.id);
+      setOfferedStudents(offeredIds);
+
       // Prepare data for the AI flow
       const studentProfilesForAI = students.map(({ id, name, resumeText }) => ({
         id,
@@ -95,7 +103,9 @@ export default function JobMatchesPage({ params }: { params: { id: string } }) {
   }, [id]);
 
   const handleMakeOffer = (student: MatchedStudent) => {
-    setOfferedStudents(prev => [...prev, student.id]);
+    if (!job) return;
+    makeOffer(student.id, job.id); // Use the store function
+    setOfferedStudents(prev => [...prev, student.id]); // Update UI immediately
     toast({
       title: 'Offer Extended!',
       description: `An offer has been made to ${student.name}.`,

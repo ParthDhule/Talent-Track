@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -15,12 +17,19 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { applications, students } from '@/lib/data';
+import { students, Application } from '@/lib/data';
 import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
+import { getApplications } from '@/lib/application-store';
 
 export default function ApplicationsPage() {
   const student = students[0]; // Mock current user
-  const studentApplications = applications.filter(app => app.student.id === student.id);
+  const [studentApplications, setStudentApplications] = useState<Application[]>([]);
+  
+  useEffect(() => {
+    const allApps = getApplications();
+    setStudentApplications(allApps.filter(app => app.student.id === student.id));
+  }, []);
 
   return (
     <Card>
