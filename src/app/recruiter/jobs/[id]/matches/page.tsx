@@ -23,13 +23,13 @@ type MatchedStudent = Student & {
   reasoning: string;
 };
 
-export default function JobMatchesPage({ params: { id } }: { params: { id: string } }) {
+export default function JobMatchesPage({ params }: { params: { id: string } }) {
   const [job, setJob] = useState<Job | null>(null);
   const [matchedStudents, setMatchedStudents] = useState<MatchedStudent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const currentJob = getJobs().find(j => j.id === id) || null;
+    const currentJob = getJobs().find(j => j.id === params.id) || null;
     setJob(currentJob);
 
     if (currentJob) {
@@ -61,7 +61,7 @@ export default function JobMatchesPage({ params: { id } }: { params: { id: strin
     } else {
         setIsLoading(false);
     }
-  }, [id]);
+  }, [params.id]);
 
   const renderSkeleton = () => (
     <Card>
