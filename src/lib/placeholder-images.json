@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "student-avatar-1",
+      "description": "Avatar of a student",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4ODc1NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "student-avatar-2",
+      "description": "Avatar of a student",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY4ODc1NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "student-avatar-3",
+      "description": "Avatar of a student",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg4NzU1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "student-avatar-4",
+      "description": "Avatar of a student",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg4NzU1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "tpo-avatar",
+      "description": "Avatar of a TPO",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwZXJzb258ZW58MHx8fHwxNzY4OTM4NzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional person"
+    },
+    {
+      "id": "recruiter-avatar",
+      "description": "Avatar of a recruiter",
+      "imageUrl": "https://images.unsplash.com/photo-1610631066894-62452ccb927c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3Njg5MjE4NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "company-logo-1",
+      "description": "Logo of a company",
+      "imageUrl": "https://images.unsplash.com/photo-1612810806563-4cb8265db55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsb2dvfGVufDB8fHx8MTc2ODg4NDA2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo"
+    },
+    {
+      "id": "company-logo-2",
+      "description": "Logo of a company",
+      "imageUrl": "https://images.unsplash.com/photo-1662052955282-da15376f3919?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsb2dvJTIwdGVjaHxlbnwwfHx8fDE3Njg5NzcyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo tech"
+    },
+    {
+      "id": "company-logo-3",
+      "description": "Logo of a company",
+      "imageUrl": "https://images.unsplash.com/photo-1663124178709-08bcffc5ae89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsb2dvJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzY4ODc5MTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo business"
+    },
+    {
+      "id": "company-logo-4",
+      "description": "Logo of a company",
+      "imageUrl": "https://images.unsplash.com/photo-1623738244303-a645cef7aafa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsb2dvJTIwbWluaW1hbGlzdHxlbnwwfHx8fDE3Njg5NzY5OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo minimalist"
+    }
+  ]
 }
