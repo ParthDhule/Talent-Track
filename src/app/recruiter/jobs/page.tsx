@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import {
   Card,
   CardContent,
@@ -8,10 +11,17 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { applications, jobs } from '@/lib/data';
+import { applications, Job } from '@/lib/data';
+import { getJobs } from '@/lib/job-store';
 import { Users, MapPin, ArrowRight, PlusCircle } from 'lucide-react';
 
 export default function RecruiterJobsPage() {
+  const [jobs, setJobs] = useState<Job[]>([]);
+
+  useEffect(() => {
+    setJobs(getJobs());
+  }, []);
+
   const jobsWithCandidateCount = jobs.map(job => ({
     ...job,
     candidateCount: applications.filter(app => app.job.id === job.id).length,
@@ -28,9 +38,11 @@ export default function RecruiterJobsPage() {
             Manage your jobs and view suggested candidates.
           </p>
         </div>
-        <Button>
-          <PlusCircle className="mr-2 h-4 w-4" />
-          Post New Job
+        <Button asChild>
+          <Link href="/recruiter/jobs/new">
+            <PlusCircle className="mr-2 h-4 w-4" />
+            Post New Job
+          </Link>
         </Button>
       </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

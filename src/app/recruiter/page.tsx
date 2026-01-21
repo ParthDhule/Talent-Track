@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { ArrowRight, Briefcase, PlusCircle, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -8,10 +11,16 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { applications, jobs } from '@/lib/data';
+import { applications } from '@/lib/data';
+import { getJobs } from '@/lib/job-store';
 
 export default function RecruiterDashboardPage() {
-  const totalJobs = jobs.length;
+  const [totalJobs, setTotalJobs] = useState(0);
+
+  useEffect(() => {
+    setTotalJobs(getJobs().length);
+  }, []);
+
   const totalApplications = applications.length;
   
   return (
@@ -70,7 +79,7 @@ export default function RecruiterDashboardPage() {
             </Link>
           </Button>
           <Button asChild variant="secondary">
-            <Link href="#">
+            <Link href="/recruiter/jobs/new">
               <PlusCircle className="mr-2 h-4 w-4" /> Post a New Job
             </Link>
           </Button>
