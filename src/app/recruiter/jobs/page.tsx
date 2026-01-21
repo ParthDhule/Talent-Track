@@ -66,7 +66,7 @@ export default function RecruiterJobsPage() {
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full">
-                <Link href="#">
+                <Link href={`/recruiter/jobs/${job.id}/matches`}>
                   View AI Matches <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
